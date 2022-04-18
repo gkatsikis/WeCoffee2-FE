@@ -6,11 +6,19 @@ import Login from './pages/Login/Login'
 import Landing from './pages/Landing/Landing'
 import Profiles from './pages/Profiles/Profiles'
 import * as authService from './services/authService'
+import * as beanService from './services/beanService'
+import BeansList from './pages/BeansList/BeansList'
 
 const App = () => {
   const [user, setUser] = useState(authService.getUser())
+  const [beans, setBeans] = useState()
   const navigate = useNavigate()
   console.log(user)
+
+  const addBean = async (beanData) => {
+    const bean = await beanService.create(beanData)
+    setBeans([...beans, bean])
+  }
 
   const handleLogout = () => {
     authService.logout()
