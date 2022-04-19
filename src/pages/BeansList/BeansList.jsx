@@ -54,6 +54,7 @@ const BeansList = (props) => {
            name="tasting"
            placeholder=" e.g. sweet cherry, tangerine, jasmine" 
            />
+           <button type="submit" className="btn">Save Coffee</button>
       </form>
     </>
    );
