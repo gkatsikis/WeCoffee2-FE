@@ -6,7 +6,7 @@ import Login from './pages/Login/Login'
 import Profiles from './pages/Profiles/Profiles'
 import * as authService from './services/authService'
 import * as beanService from './services/beanService'
-import BeansList from './pages/BeansList/BeansList'
+import BeansInput from './pages/BeansInput/BeansInput'
 
 const App = () => {
   const [user, setUser] = useState(authService.getUser())
@@ -43,7 +43,7 @@ const App = () => {
       <Routes>
         <Route 
         path="/"
-        element={<BeansList addBean={addBean} />} 
+        element={<BeansInput addBean={addBean} />} 
         />
         <Route
           path="/signup"

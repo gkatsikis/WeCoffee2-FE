@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const BeansList = (props) => {
+const BeansInput = (props) => {
   const [form, setForm] = useState({})
 
   const handleSubmit = async (e) => {
@@ -60,4 +60,4 @@ const BeansList = (props) => {
    );
 }
  
-export default BeansList;
+export default BeansInput;
