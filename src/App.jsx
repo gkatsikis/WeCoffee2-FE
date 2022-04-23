@@ -4,9 +4,10 @@ import NavBar from './components/NavBar/NavBar'
 import Signup from './pages/Signup/Signup'
 import Login from './pages/Login/Login'
 import Profiles from './pages/Profiles/Profiles'
+import BeansInput from './pages/BeansInput/BeansInput'
+import BeansList from './pages/BeansList/BeansList'
 import * as authService from './services/authService'
 import * as beanService from './services/beanService'
-import BeansInput from './pages/BeansInput/BeansInput'
 
 const App = () => {
   const [user, setUser] = useState(authService.getUser())
@@ -45,6 +46,8 @@ const App = () => {
         path="/"
         element={<BeansInput addBean={addBean} />} 
         />
+        <Route path="/beans"
+        element={<BeansList />} />
         <Route
           path="/signup"
           element={<Signup handleSignupOrLogin={handleSignupOrLogin} />}
