@@ -1,11 +1,15 @@
 import { useState, useEffect } from 'react'
 import { Routes, Route, useNavigate, Navigate } from 'react-router-dom'
+
+// Pages
 import NavBar from './components/NavBar/NavBar'
 import Signup from './pages/Signup/Signup'
 import Login from './pages/Login/Login'
 import Profiles from './pages/Profiles/Profiles'
 import BeansInput from './pages/BeansInput/BeansInput'
 import BeansList from './pages/BeansList/BeansList'
+
+// Services
 import * as authService from './services/authService'
 import * as beanService from './services/beanService'
 
@@ -29,14 +33,6 @@ const App = () => {
   const handleSignupOrLogin = () => {
     setUser(authService.getUser())
   }
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const data = await beanService.getAll()
-      setBeans(data)
-    }
-    fetchData()
-  }, [])
 
   return (
     <>
