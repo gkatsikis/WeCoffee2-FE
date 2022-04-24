@@ -24,6 +24,15 @@ const App = () => {
     setBeans([...beans, bean])
   }
 
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await beanService.getAll()
+      setBeans(data)
+    }
+    fetchData()
+  }, [])
+
+
   const handleLogout = () => {
     authService.logout()
     setUser(null)
@@ -43,7 +52,7 @@ const App = () => {
         element={<BeansInput addBean={addBean} />} 
         />
         <Route path="/beans"
-        element={<BeansList />} />
+        element={<BeansList beans={beans} />} />
         <Route
           path="/signup"
           element={<Signup handleSignupOrLogin={handleSignupOrLogin} />}

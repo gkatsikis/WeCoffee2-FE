@@ -1,20 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import * as beanService from '../../services/beanService'
+import BeansCard from "../../components/BeansCard/BeansCard";
 
-const BeansList = (props) => {
-  const [beans, setBeans] = useState()
+const BeansList = ({ beans }) => {
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const data = await beanService.getAll()
-      setBeans(data)
-    }
-    fetchData()
-  }, [])
+  
+  if (!beans) return <h1> Loading </h1>
 
   return ( 
     <>
       <h1>All da Beans</h1>
+      <BeansCard beans={beans} />
     </>
    );
 }
