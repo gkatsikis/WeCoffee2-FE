@@ -1,12 +1,12 @@
 import * as tokenService from './tokenService'
-const BASE_URL = `${process.env.REACT_APP_URL}/api/beans`
+const BASE_URL = `${process.env.REACT_APP_API_URL}/api/beans/`
 
 export const create = async (bean) => {
   try {
-    const res = await fetch(BASE_URL, {
+    const res = await fetch('http://127.0.0.1:5000/api/beans/', {
       method: 'POST',
       headers: {
-        'content-type': 'application/json',
+        // 'content-type': 'application/json',
         'Authorization': `Bearer ${tokenService.getToken()}`
       },
       body: JSON.stringify(bean)
@@ -26,3 +26,4 @@ export const getAll = async () => {
     throw error
   }
 }
+

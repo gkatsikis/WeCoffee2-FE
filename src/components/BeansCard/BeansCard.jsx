@@ -1,10 +1,11 @@
+import React from "react";
 
 const BeansCard = ({ beans }) => {
   return ( 
     <>
       <h2>ALL OF THEM</h2>
       {beans.map(bean => {
-        <>
+        return <>
         <h3>{bean.name}</h3>
         <p>{bean.roaster}</p>
         <p>{bean.origin}</p>

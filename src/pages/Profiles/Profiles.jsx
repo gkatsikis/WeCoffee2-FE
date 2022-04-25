@@ -1,5 +1,6 @@
-import { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import * as profileService from '../../services/profileService'
+
 
 const Profiles = () => {
   const [profiles, setProfiles] = useState([])

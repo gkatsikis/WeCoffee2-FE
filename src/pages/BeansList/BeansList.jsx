@@ -1,3 +1,4 @@
+import React from "react";
 import BeansCard from "../../components/BeansCard/BeansCard";
 
 const BeansList = ({ beans }) => {
