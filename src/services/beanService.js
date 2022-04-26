@@ -1,5 +1,5 @@
 import * as tokenService from './tokenService'
-const BASE_URL = `${process.env.REACT_APP_API_URL}/api/beans`
+const BASE_URL = `${process.env.REACT_APP_API_URL}/api/beans/`
 
 export const create = async (bean) => {
   try {
@@ -11,7 +11,7 @@ export const create = async (bean) => {
       },
       body: JSON.stringify(bean)
     })
-    return await res.json
+    return await res.json()
   } catch (error) {
     console.log(error)
     throw error
