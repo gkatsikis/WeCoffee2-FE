@@ -15,7 +15,9 @@ const Profiles = () => {
       {profiles.length ? 
         <>
           {profiles.map(profile=>
-            <p key={profile._id}>{profile.name}</p>
+          <>
+            <p key={profile.user_id}>{profile.name}</p>
+          </>
           )}
         </>
       :

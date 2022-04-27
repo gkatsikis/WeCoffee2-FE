@@ -45,9 +45,9 @@ const BeansInput = (props) => {
          name="region"
          placeholder=" e.g. Huila"
           />
-          <label htmlFor="producer">Producer</label>
+          <label htmlFor="farmer">Producer</label>
           <input type="text"
-          name="producer"
+          name="farmer"
           placeholder=" e.g. Oscar and Diego Hoyos"
           onChange={handleChange} 
           />
