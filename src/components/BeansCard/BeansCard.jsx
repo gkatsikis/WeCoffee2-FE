@@ -2,14 +2,13 @@ import { Link } from "react-router-dom";
 
 
 const BeansCard = ({ beans }) => {
-  console.log(beans)
 
   return ( 
     <>
       <h2>ALL OF THEM</h2>
       {beans.map(bean => {
         return <>
-        <Link to={`/beans/${beans.id}`} className="card">
+        <Link to={`/beans/${bean.id}`} className="card">
           <div>
             <h3>{bean.name}</h3>
             <p>{bean.roaster}</p>

@@ -12,6 +12,7 @@ import BeansList from './pages/BeansList/BeansList'
 // Services
 import * as authService from './services/authService'
 import * as beanService from './services/beanService'
+import BeansDetails from './pages/BeansDetails/BeansDetails'
 
 const App = () => {
   const [user, setUser] = useState(authService.getUser())
@@ -51,8 +52,14 @@ const App = () => {
         path="/"
         element={<BeansInput addBean={addBean} />} 
         />
-        <Route path="/beans"
-        element={<BeansList beans={beans} />} />
+        <Route 
+        path="/beans"
+        element={<BeansList beans={beans} />} 
+        />
+        <Route
+        path="/beans/:id"
+        element={<BeansDetails />}
+        />
         <Route
           path="/signup"
           element={<Signup handleSignupOrLogin={handleSignupOrLogin} />}

@@ -20,6 +20,9 @@ const BeansDetails = (props) => {
   return ( 
     <>
       <h1>specific yo</h1>
+      <p>favorite</p>
+      <p>review</p>
+      <p>rating</p>
     </>
    );
 }
