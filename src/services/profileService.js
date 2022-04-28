@@ -9,4 +9,14 @@ async function getAllProfiles() {
   return await res.json()
 }
 
-export { getAllProfiles }
+async function getProfile(id) {
+  try {
+    const res = await fetch(`${BASE_URL}/${id}`)
+    return await res.json()
+  } catch (error) {
+    console.log(error)
+    throw error
+  }
+}
+
+export { getAllProfiles, getProfile }

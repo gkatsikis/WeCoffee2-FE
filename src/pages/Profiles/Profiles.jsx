@@ -1,27 +1,26 @@
 import { useState, useEffect } from 'react'
 import * as profileService from '../../services/profileService'
 
-const Profiles = () => {
-  const [profiles, setProfiles] = useState([])
+const Profiles = ({ user, beans }) => {
+  const [profile, setProfile] = useState()
 
   useEffect(()=> {
-    profileService.getAllProfiles()
-    .then(profiles => setProfiles(profiles))
-  }, [])
+    const fetchData = async () => {
+      const data = await profileService.getProfile(user.id)
+      setProfile(data.profile)
+    }
+    fetchData()
+  }, [user.id])
 
   return (
     <>
-      <h1>Hello. This is a list of all the profiles.</h1>
-      {profiles.length ? 
+      <h1>{user.name}'s Contributions</h1>
+      {beans.length ? 
         <>
-          {profiles.map(profile=>
-          <>
-            <p key={profile.user_id}>{profile.name}</p>
-          </>
-          )}
+          
         </>
       :
-        <p>No profiles yet</p>
+        <p>No beans yet</p>
       }
     </>
   )

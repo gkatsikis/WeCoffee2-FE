@@ -70,7 +70,7 @@ const App = () => {
         />
         <Route
           path="/profiles"
-          element={user ? <Profiles /> : <Navigate to="/login" />}
+          element={user ? <Profiles user={user} beans={beans} /> : <Navigate to="/login" />}
         />
 
       </Routes>
