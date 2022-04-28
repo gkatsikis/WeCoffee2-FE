@@ -15,6 +15,8 @@ const BeansDetails = (props) => {
     fetchOne()
   }, [id])
 
+  if (!bean) return <h1>Loading...</h1>
+
   return ( 
     <>
       <h1>specific yo</h1>
