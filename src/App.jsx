@@ -20,11 +20,7 @@ const App = () => {
   const navigate = useNavigate()
   console.log(user)
 
-  const addBean = async (beanData) => {
-    const bean = await beanService.create(beanData)
-    setBeans([...beans, bean])
-  }
-
+  
   useEffect(() => {
     const fetchData = async () => {
       const data = await beanService.getAll()
@@ -32,7 +28,16 @@ const App = () => {
     }
     fetchData()
   }, [])
+  
+  const addBean = async (beanData) => {
+    const bean = await beanService.create(beanData)
+    setBeans([...beans, bean])
+  }
 
+  const deleteBean = async (id) => {
+    await beanService.deleteOne(id)
+    setBeans(beans.filter(bean => bean.id !== parseInt(id)))
+  }
 
   const handleLogout = () => {
     authService.logout()
@@ -70,7 +75,7 @@ const App = () => {
         />
         <Route
           path="/profiles"
-          element={user ? <Profiles user={user} beans={beans} /> : <Navigate to="/login" />}
+          element={user ? <Profiles user={user} beans={beans} deleteBean={deleteBean} /> : <Navigate to="/login" />}
         />
 
       </Routes>
