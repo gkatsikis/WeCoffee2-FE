@@ -8,8 +8,9 @@ const BeansCard = ({ beans }) => {
       <h2>ALL OF THEM</h2>
       {beans.map(bean => {
         return <>
-        <Link to={`/beans/${bean.id}`} className="card">
-          <div>
+        <Link to={`/beans/${bean.id}`} className="blog-card"
+        key={bean.id}>
+            <div className="description">
             <h3>{bean.name}</h3>
             <p>{bean.roaster}</p>
             <p>{bean.origin}</p>
@@ -17,7 +18,7 @@ const BeansCard = ({ beans }) => {
             <p>Producer: {bean.farmer}</p>
             <p>Varietal(s): {bean.varietals}</p>
             <p>Tasting notes: {bean.tasting}</p>
-          </div>
+            </div>
         </Link>
         </>
       })}

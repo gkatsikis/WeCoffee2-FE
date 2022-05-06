@@ -18,8 +18,6 @@ const App = () => {
   const [user, setUser] = useState(authService.getUser())
   const [beans, setBeans] = useState()
   const navigate = useNavigate()
-  console.log(user)
-
   
   useEffect(() => {
     const fetchData = async () => {
