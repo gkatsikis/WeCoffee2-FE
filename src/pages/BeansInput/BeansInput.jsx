@@ -15,7 +15,8 @@ const BeansInput = (props) => {
   return ( 
     <>
       <h1>What did you try?</h1>
-      <form onSubmit={handleSubmit}>
+      <form 
+      onSubmit={handleSubmit}>
         <label htmlFor="name">Name</label>
         <input type="text"
         required
