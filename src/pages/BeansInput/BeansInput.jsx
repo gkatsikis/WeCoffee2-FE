@@ -14,6 +14,7 @@ const BeansInput = (props) => {
 
   return ( 
     <>
+      <div className="frame-beans">
       <h1>What did you try?</h1>
       <form 
       onSubmit={handleSubmit}>
@@ -45,18 +46,21 @@ const BeansInput = (props) => {
          <input type="text"
          name="region"
          placeholder=" e.g. Huila"
+         className="bean-input"
           />
           <label htmlFor="farmer">Producer</label>
           <input type="text"
           name="farmer"
           placeholder=" e.g. Oscar and Diego Hoyos"
           onChange={handleChange} 
+          className="bean-input"
           />
           <label htmlFor="varietals">Varietal(s)</label>
           <input type="text"
           name="varietals"
           placeholder=" e.g. Pink Bourbon"
           onChange={handleChange}
+          className="bean-input"
            />
            <label htmlFor="tasting">Tasting Notes</label>
            <input type="text"
@@ -64,9 +68,11 @@ const BeansInput = (props) => {
            name="tasting"
            placeholder=" e.g. sweet cherry, tangerine, jasmine"
            onChange={handleChange} 
+           className="bean-input"
            />
-           <button type="submit" className="btn">Save Coffee</button>
+           <button type="submit" className="btn btn-primary">Save Coffee</button>
       </form>
+      </div>
     </>
    );
 }
