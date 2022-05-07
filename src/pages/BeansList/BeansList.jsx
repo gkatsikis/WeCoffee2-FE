@@ -7,7 +7,7 @@ const BeansList = ({ beans }) => {
 
   return ( 
     <>
-      <h1>All da Beans</h1>
+      <h1 className="beans-header">All da Beans</h1>
       <BeansCard beans={beans} />
     </>
    );

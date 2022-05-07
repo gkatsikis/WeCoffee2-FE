@@ -4,8 +4,7 @@ import { Link } from "react-router-dom";
 const BeansCard = ({ beans }) => {
 
   return ( 
-    <>
-      <h2>ALL OF THEM</h2>
+    <div className="beans-list">
       {beans.map(bean => {
         return <>
         <Link to={`/beans/${bean.id}`} className="blog-card"
@@ -22,7 +21,7 @@ const BeansCard = ({ beans }) => {
         </Link>
         </>
       })}
-    </>
+    </div>
    );
 }
 
