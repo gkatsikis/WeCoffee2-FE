@@ -37,6 +37,13 @@ const App = () => {
     setBeans(beans.filter(bean => bean.id !== parseInt(id)))
   }
 
+  const updateBean = async (beanData) => {
+    const updatedBean = await beanService.update(beanData)
+    setBeans(beans.map((bean) => (
+      bean.id === updatedBean.id ? updatedBean : bean
+    )))
+  }
+
   const handleLogout = () => {
     authService.logout()
     setUser(null)

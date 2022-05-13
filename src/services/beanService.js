@@ -47,3 +47,19 @@ export const getOne = async (id) => {
     throw error
   }
 }
+
+export const update = async (bean) => {
+  try {
+    const res = await fetch(`${BASE_URL}${bean.id}`, {
+      method: 'PUT',
+      headers: {
+        'content-type': 'application/json',
+        'Authorization': `Bearer ${tokenService.getToken()}`
+      },
+      body: JSON.stringify(bean)
+    })
+    return await res.json()
+  } catch (error) {
+    throw error
+  }
+}
