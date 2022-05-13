@@ -6,6 +6,7 @@ const BeansInput = (props) => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     props.addBean(form)
+    e.target.reset()
   }
 
   const handleChange = (e) => {
