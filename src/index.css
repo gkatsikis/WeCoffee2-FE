@@ -26,8 +26,8 @@ code {
   }
 
   .frame {
-    height: 575px;
-    width: 430px;
+    height: 700px;
+    width: 33%;
     background:
       linear-gradient(
       rgba(35,43,85,0.75),
@@ -89,14 +89,15 @@ code {
     padding-right: 37px;
     padding-top: 55px;
     transition: opacity .5s ease, transform .5s ease;
+   
   }
 
   .form-signup {
-    padding-left: 37px;
-    position: relative;
-    top: -10px;
-    left: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     transition: all .5s ease;
+    border: 1px solid red;
   }
 
   label {
@@ -110,7 +111,7 @@ code {
   }
 
   .form-styling {
-    width: 80%;
+    width: 100%;
     height: 35px;
     color: whitesmoke;
     font-weight: bold;
