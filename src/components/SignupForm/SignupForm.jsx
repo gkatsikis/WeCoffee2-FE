@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import styles from './SignupForm.module.css'
 import * as authService from '../../services/authService'
 
 const SignupForm = props => {
@@ -43,8 +42,8 @@ const SignupForm = props => {
       onSubmit={handleSubmit}
       className="form-signup"
     >
-      <div className={styles.inputContainer}>
-        <label htmlFor="name" className={styles.label}>Name</label>
+      <div>
+        <label htmlFor="name">Name</label>
         <input
           type="text"
           autoComplete="off"
@@ -55,8 +54,8 @@ const SignupForm = props => {
           className="form-styling"
         />
       </div>
-      <div className={styles.inputContainer}>
-        <label htmlFor="email" className={styles.label}>Email</label>
+      <div>
+        <label htmlFor="email">Email</label>
         <input
           type="text"
           autoComplete="off"
@@ -67,8 +66,8 @@ const SignupForm = props => {
           className="form-styling"
         />
       </div>
-      <div className={styles.inputContainer}>
-        <label htmlFor="password" className={styles.label}>Password</label>
+      <div>
+        <label htmlFor="password">Password</label>
         <input
           type="password"
           autoComplete="off"
@@ -79,8 +78,8 @@ const SignupForm = props => {
           className="form-styling"
         />
       </div>
-      <div className={styles.inputContainer}>
-        <label htmlFor="confirm" className={styles.label}>
+      <div>
+        <label htmlFor="confirm">
           Confirm Password
         </label>
         <input
@@ -93,7 +92,7 @@ const SignupForm = props => {
           className="form-styling"
         />
       </div>
-      <div className={styles.inputContainer}>
+      <div className='grouped-buttons'>
         <button disabled={isFormInvalid()} className="btn-signup">
           Sign Up
         </button>
