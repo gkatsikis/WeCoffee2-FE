@@ -182,39 +182,6 @@ code {
     margin-top: 50px;
   }
 
-  .beans-list {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-  .blog-card {
-    width: 33%; /* change with screen size */
-    align-items: center;
-    margin: 1rem auto;
-    box-shadow: 0 3px 7px -1px rgba(#000, .1);
-    margin-bottom: 1.6%;
-    background-color: white;
-    line-height: 1.4;
-    font-family: sans-serif;
-    border-radius: 5px;
-    overflow: hidden;
-    z-index: 0;
-    text-decoration: none;
-    color:rgba(79, 32, 1, 0.95);
-    opacity: 80%;
-    margin: 10px;
-  }
-
-  .description {
-    padding: 1rem;
-    background-color: white;
-    position: relative;
-    z-index: 1;
-  }
-
-  .description h3 {
-    font-family: 'Roboto Serif', serif;
-  }
+ 
 
 }
