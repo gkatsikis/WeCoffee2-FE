@@ -56,7 +56,7 @@ const LoginForm = props => {
           className="form-styling"
         />
       </div>
-      <div>
+      <div className='grouped-buttons'>
         <button className="btn-signin">Log In</button>
         <Link to="/">
           <button className="btn-cancel">Cancel</button>
