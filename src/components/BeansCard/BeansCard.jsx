@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import './BeansCard.css'
 
 const BeansCard = ({ beans }) => {
-  console.log('BEANNNSSS', beans)
   return ( 
     <div className="beans-list">
       {beans.map(bean => {

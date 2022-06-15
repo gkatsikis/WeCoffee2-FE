@@ -11,6 +11,7 @@ const BeansDetails = (props) => {
     const fetchOne = async () => {
       const data = await getOne(id)
       setBean(data.bean)
+      console.log('data.bean', data.bean)
     }
     fetchOne()
   }, [id])
@@ -20,9 +21,13 @@ const BeansDetails = (props) => {
   return ( 
     <>
       <h1>specific yo</h1>
-      <p>favorite</p>
-      <p>review</p>
-      <p>rating</p>
+        <p>{bean.name}</p>
+        <p>{bean.roaster}</p>
+        <p>{bean.origin}</p>
+        <p>{bean.region}</p>
+        <p>Producer: {bean.farmer}</p>
+        <p>Varietal(s): {bean.varietals}</p>
+        <p>Tasting notes: {bean.tasting}</p>
     </>
    );
 }
