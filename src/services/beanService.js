@@ -63,3 +63,20 @@ export const update = async (bean) => {
     throw error
   }
 }
+
+export const createReview = async (id, review) => {
+  try {
+    const res = await fetch(`${BASE_URL}/${id}/review`, {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+        'Authorization': 'Bearer ' + tokenService.getToken()
+      },
+      body: JSON.stringify(review)
+    })
+    const data = await res.json()
+    return data
+  } catch (error) {
+    throw error
+  }
+}

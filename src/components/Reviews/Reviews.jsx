@@ -20,7 +20,7 @@ const Reviews = (props) => {
           </div>
           <div className="rating">
             <label htmlFor="rating" className="title">Rating</label>
-            <select name="rating">
+            <select name="rating" onChange={handleChange}>
               <option value="0">0</option>
               <option value="1">1</option>
               <option value="2">2</option>
