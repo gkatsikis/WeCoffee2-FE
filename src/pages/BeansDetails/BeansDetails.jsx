@@ -1,7 +1,7 @@
 import { getOne } from '../../services/beanService'
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-
+import Reviews from '../../components/Reviews/Reviews';
 
 const BeansDetails = (props) => {
   const { id } = useParams()
@@ -28,6 +28,7 @@ const BeansDetails = (props) => {
         <p>Producer: {bean.farmer}</p>
         <p>Varietal(s): {bean.varietals}</p>
         <p>Tasting notes: {bean.tasting}</p>
+        <Reviews />
     </>
    );
 }
